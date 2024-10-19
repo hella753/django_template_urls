@@ -1,0 +1,13 @@
+{% load static %}
+<div class="container-fluid vesitable py-5">
+    <div class="container py-5">
+        <h1 class="mb-0">Fresh Organic Vegetables</h1>
+        <div class="owl-carousel vegetable-carousel justify-content-center">
+            {% for product in products %}
+                {% for i in product.product_quantity %}
+                    {% include 'homepage/veg.html' with product_image=product.image title_cat="Vegetable" title_prod=product.product_name text=product.product_desc price=product.product_price %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
