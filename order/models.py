@@ -56,7 +56,7 @@ class Cart(models.Model):
 class CartItems(models.Model):
     product = models.ForeignKey("store.Product", on_delete=models.CASCADE, verbose_name="პროდუქტი")
     product_quantity = models.PositiveIntegerField("რაოდენობა")
-    cart = models.ForeignKey("order.Cart", on_delete=models.CASCADE, verbose_name="მომხმარებელი")
+    cart = models.ForeignKey("order.Cart", on_delete=models.CASCADE, verbose_name="კალათა")
     total_price = models.IntegerField("მთლიანი ფასი", null=True, blank=True)
 
     def get_total_price(self):

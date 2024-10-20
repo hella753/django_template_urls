@@ -1,4 +1,15 @@
 {% extends 'base.html' %}
+
+{% comment %}
+extends from base.html changes the title and navbar's active page.
+has block content for header hero and features. After that goes the
+checkoutcontent which is in the checkout.html.
+{% endcomment %}
+
+{% block title %}
+    Checkout
+{% endblock %}
+
 {% block nav %}
     {% include 'reusable_components/nav.html' with checkout="active" %}
 {% endblock nav %}

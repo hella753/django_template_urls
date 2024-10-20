@@ -1,6 +1,5 @@
 {% load static %}
-{% block content %}
-<div class="col-md-6 col-lg-4 col-xl-3">
+ <div class="col-md-6 col-lg-4 col-xl-3">
     <div class="rounded position-relative fruite-item">
         <div class="{{ type }}-img">
             <img src="{% static product_image %}"
@@ -11,7 +10,7 @@
         </div>
         <div class="p-4 border border-secondary border-top-0 rounded-bottom">
             <h4>{{ title_prod }}</h4>
-            <p>{{ text }}</p>
+            <p>{{ text|default:"Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt" }}</p>
             <div class="d-flex justify-content-between flex-lg-wrap">
                 <p class="text-dark fs-5 fw-bold mb-0">${{ price }} / kg</p>
                 <a href="#"
@@ -22,5 +21,3 @@
         </div>
     </div>
 </div>
-
-{% endblock %}

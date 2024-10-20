@@ -2,54 +2,76 @@
 {% load static %}
 {% block indexcontent %}
 
-<!-- Vesitable Shop Start-->
-{% include 'homepage/vegetable-shop.html' with products=veggies %}
-<!-- Vesitable Shop End -->
+    {# Fruit Shop Start #}
+    {% include 'homepage/fruit-shop.html' with products=fruits range=range %}
+    {# Fruit Shop End #}
 
-
-<!-- Banner Section Start-->
-{% include 'homepage/banner.html' %}
-<!-- Banner Section End -->
-
-
-<!-- Bestsaler Product Start -->
-<div class="container-fluid py-5">
-    <div class="container py-5">
-        <div class="text-center mx-auto mb-5" style="max-width: 700px;">
-            <h1 class="display-4">Bestseller Products</h1>
-            <p>Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks
-                reasonable.</p>
-        </div>
-        <!-- ბაზიდან მომაქვს ხილი -->
-        <div class="row g-4">
-            {% for product in fruits %}
-                {% include 'homepage/bestseller-product.html' with product_image=product.image title_prod=product.product_name price=product.product_price%}
-            {% endfor %}
-        </div>
-    </div>
-</div>
-<!-- Bestsaler Product End -->
-
-
-<!-- Fact Start -->
-<div class="container-fluid py-5">
-    <div class="container">
-        <div class="bg-light p-5 rounded">
+    {# Features #}
+    <div class="container-fluid service py-5">
+        <div class="container py-5">
             <div class="row g-4 justify-content-center">
-                {% include 'homepage/fact.html' with text="satisfied customers" num="1963" %}
-                {% include 'homepage/fact.html' with text="quality of service" num="99%" %}
-                {% include 'homepage/fact.html' with text="quality certificates" num="33" %}
-                {% include 'homepage/fact.html' with text="Available Products" num="789" %}
+                {% include 'homepage/benefit.html' with color_item="bg-secondary" color_content="bg-primary" title="Fresh Apples" color_text="text-white" text="20% OFF" image="img/featur-1.jpg" %}
+                {% include 'homepage/benefit.html' with color_item="bg-dark" color_content="bg-light" title="Tasty Fruits" color_text="text-primary" text="Free delivery" image="img/featur-2.jpg" %}
+                {% include 'homepage/benefit.html' with color_item="bg-primary" color_content="bg-secondary" title="Exotic Vegitable" color_text="text-white" text="Discount 30$" image="img/featur-3.jpg" %}
             </div>
         </div>
     </div>
-</div>
-<!-- Fact Start -->
+    {# Features end #}
+
+    {# Vegetable shop #}
+    {% include 'homepage/vegetable-shop.html' with products=veggies %}
+    {# Vegetable shop end #}
 
 
-<!-- Tastimonial Start -->
-{% include 'homepage/testimonial-home.html' with reviews=reviews %}
-<!-- Tastimonial End -->
+    {# Banner #}
+    {% include 'homepage/banner.html' %}
+    {# Banner end #}
 
-        
+
+    {# Bestseller #}
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+                <h1 class="display-4">Bestseller Products</h1>
+                <p>Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which
+                    looks
+                    reasonable.</p>
+            </div>
+            <!-- ბაზიდან მომაქვს ხილი -->
+            <div class="row g-4">
+                {% for product in fruits %}
+                    {% include 'homepage/bestseller-product.html' with product_image=product.image title_prod=product.product_name price=product.product_price %}
+                {% endfor %}
+                {# ეს აღარ ჩანდა ლამაზად და ამოვაგდე #}
+                {#                {% for product in fruits %}#}
+                {#                    {% include 'homepage/bestseller-fruit-items.html' with product_image=product.image title_prod=product.product_name price=product.product_price %}#}
+                {#                {% endfor %}#}
+            </div>
+
+        </div>
+    </div>
+    {# Bestseller end #}
+
+
+    {# Fact #}
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="bg-light p-5 rounded">
+                <div class="row g-4 justify-content-center">
+                    {% include 'homepage/fact.html' with text="satisfied customers" num="1963" %}
+                    {% include 'homepage/fact.html' with text="quality of service" num="99%" %}
+                    {% include 'homepage/fact.html' with text="quality certificates" num="33" %}
+                    {% include 'homepage/fact.html' with text="Available Products" num="789" %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {# Fact end #}
+
+
+    {# testimonial #}
+    {% include 'homepage/testimonial-home.html' with reviews=reviews %}
+    {# testimonial end #}
+
+
 {% endblock indexcontent %}

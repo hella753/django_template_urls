@@ -20,6 +20,7 @@ def index(request):
             "product_desc": prod.product_description,
             "product_category": prod.product_category,
             "image": prod.image_url,
+            "slug": prod.slug
         }
         fruit_list.append(fruit_dict)
     for prod in veggies:
@@ -31,12 +32,15 @@ def index(request):
             "product_desc": prod.product_description,
             "product_category": prod.product_category,
             "image": prod.image_url,
+            "slug": prod.slug
+
         }
         veggy_list.append(veggy_dict)
     context = {
         "fruits": fruit_list,
         "veggies": veggy_list,
-        "reviews": reviews
+        "reviews": reviews,
+        "range": range(0,4)
     }
     print(context)
     return render(request, "homepage/index.html", context)

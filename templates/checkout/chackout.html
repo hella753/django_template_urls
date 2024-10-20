@@ -11,16 +11,8 @@
                     {% include 'checkout/order.html' %}
                     <div class="col-md-12 col-lg-6 col-xl-5">
                         <div class="table-responsive">
-                            <table class="table">
-                                <thead>
-                                {% include 'cart/table_headers.html' %}
-                                </thead>
-                                <tbody>
-                                {% include 'cart/cartitem.html' with cartitems=cartitems %}
-                                </tbody>
-                            </table>
+                            {% include 'checkout/checkout_cart.html' with cartitems=cartitems %}
                         </div>
-                        {% include 'checkout/total.html' with total=total subtotal=subtotal cart=cart %}
                         <th scope="row">
                         </th>
                     </div>

@@ -9,6 +9,7 @@
                 </div>
                 <div class="col-lg-8 text-end">
                     <ul class="nav nav-pills d-inline-flex text-center mb-5">
+                        {# this is for filtering #}
                         {% include "homepage/nav-item.html" with tab="#tab-1" text="All Products" active="active" %}
                         {% include "homepage/nav-item.html" with tab="#tab-2" text="Vegetables" active="" %}
                         {% include "homepage/nav-item.html" with tab="#tab-3" text="Fruits" active="" %}
@@ -23,7 +24,7 @@
                     <div class="row g-4">
                         <div class="col-lg-12">
                             <div class="row g-4">
-                            <!-- ბაზიდან მომაქვს ხილი და მარაგში რაოდენობის მიხედვით ვარენდერებ -->
+                                <!-- ბაზიდან მომაქვს ხილი და მარაგში რაოდენობის მიხედვით ვარენდერებ -->
                                 {% for product in products %}
                                     {% for i in product.product_quantity %}
                                         {% include 'homepage/product.html' with product_image=product.image title_cat="Fruits" title_prod=product.product_name text=product.product_desc price=product.product_price %}
@@ -39,8 +40,8 @@
                     <div class="row g-4">
                         <div class="col-lg-12">
                             <div class="row g-4">
-                                {% include 'homepage/product.html' with product_image="img/fruite-item-5.jpg" title_cat="Fruits" title_prod="Grapes" text="Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt" price="4.99" %}
-                                {% include 'homepage/product.html' with product_image="img/fruite-item-2.jpg" title_cat="Fruits" title_prod="Raspberries" text="Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt" price="4.99" %}
+                                {% include 'homepage/product.html' with product_image="img/fruite-item-5.jpg" title_cat="Fruits" title_prod="Grapes" price="4.99" %}
+                                {% include 'homepage/product.html' with product_image="img/fruite-item-2.jpg" title_cat="Fruits" title_prod="Raspberries" price="4.99" %}
                             </div>
                         </div>
                     </div>
@@ -49,8 +50,8 @@
                     <div class="row g-4">
                         <div class="col-lg-12">
                             <div class="row g-4">
-                                {% include 'homepage/product.html' with product_image="img/fruite-item-1.jpg" title_cat="Fruits" title_prod="Oranges" text="Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt" price="4.99" %}
-                                {% include 'homepage/product.html' with product_image="img/fruite-item-6.jpg" title_cat="Fruits" title_prod="Apple" text="Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt" price="4.99" %}
+                                {% include 'homepage/product.html' with product_image="img/fruite-item-1.jpg" title_cat="Fruits" title_prod="Oranges" price="4.99" %}
+                                {% include 'homepage/product.html' with product_image="img/fruite-item-6.jpg" title_cat="Fruits" title_prod="Apple" price="4.99" %}
                             </div>
                         </div>
                     </div>
@@ -59,8 +60,8 @@
                     <div class="row g-4">
                         <div class="col-lg-12">
                             <div class="row g-4">
-                                {% include 'homepage/product.html' with product_image="img/fruite-item-5.jpg" title_cat="Fruits" title_prod="Grapes" text="Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt" price="4.99" %}
-                                {% include 'homepage/product.html' with product_image="img/fruite-item-4.jpg" title_cat="Fruits" title_prod="Apricots" text="Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt" price="4.99" %}
+                                {% include 'homepage/product.html' with product_image="img/fruite-item-5.jpg" title_cat="Fruits" title_prod="Grapes" price="4.99" %}
+                                {% include 'homepage/product.html' with product_image="img/fruite-item-4.jpg" title_cat="Fruits" title_prod="Apricots" price="4.99" %}
                             </div>
                         </div>
                     </div>
@@ -69,9 +70,9 @@
                     <div class="row g-4">
                         <div class="col-lg-12">
                             <div class="row g-4">
-                                {% include 'homepage/product.html' with product_image="img/fruite-item-3.jpg" title_cat="Fruits" title_prod="Banana" text="Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt" price="4.99" %}
-                                {% include 'homepage/product.html' with product_image="img/fruite-item-2.jpg" title_cat="Fruits" title_prod="Raspberries" text="Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt" price="4.99" %}
-                                {% include 'homepage/product.html' with product_image="img/fruite-item-1.jpg" title_cat="Fruits" title_prod="Oranges" text="Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt" price="4.99" %}
+                                {% include 'homepage/product.html' with product_image="img/fruite-item-3.jpg" title_cat="Fruits" title_prod="Banana" price="4.99" %}
+                                {% include 'homepage/product.html' with product_image="img/fruite-item-2.jpg" title_cat="Fruits" title_prod="Raspberries" price="4.99" %}
+                                {% include 'homepage/product.html' with product_image="img/fruite-item-1.jpg" title_cat="Fruits" title_prod="Oranges" price="4.99" %}
                             </div>
                         </div>
                     </div>

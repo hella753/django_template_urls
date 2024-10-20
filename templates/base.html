@@ -1,11 +1,17 @@
 {% load static %}
 
+{% comment %}
+Starting template for all section bases.
+Has parts for navbar, spinner, footer and copyright
+which appears everywhere.
+{% endcomment %}
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Fruitables - Vegetable Website Template</title>
+    <title>{% block title %} {% endblock %}</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
