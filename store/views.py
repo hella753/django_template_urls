@@ -47,7 +47,7 @@ def index(request):
 
 def category_listings(request, slug):
     categories=Category.objects.all()
-    products=Product.objects.all()
+    products=Product.objects.all().prefetch_related("product_category")
     categories=categories.annotate(count=Count("product"))
     context = {
         "categories": categories,

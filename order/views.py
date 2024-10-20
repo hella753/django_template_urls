@@ -6,7 +6,7 @@ from order.models import CartItems
 
 # Create your views here.
 def cart(request):
-    cartitems = CartItems.objects.filter(cart__user__username="customer").all()
+    cartitems = CartItems.objects.filter(cart__user__username="customer").select_related("product").all()
     cart = Cart.objects.get(user__username="customer")
     subtotal = cartitems.aggregate(total=Sum("total_price")).get("total")
     total = subtotal + cart.flat_rate
@@ -21,7 +21,7 @@ def cart(request):
 
 
 def checkout(request):
-    cartitems = CartItems.objects.filter(cart__user__username="customer").all()
+    cartitems = CartItems.objects.filter(cart__user__username="customer").select_related("product").all()
     cart = Cart.objects.get(user__username="customer")
     subtotal = cartitems.aggregate(total=Sum("total_price")).get("total")
     total = subtotal + cart.flat_rate
