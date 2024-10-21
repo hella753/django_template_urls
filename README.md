@@ -28,13 +28,13 @@ There are several records for fruits and vegetables.
   * footer.html - Footer component
 
 ### Urls
-  * Home - is accessible on route '/'
-  * Shop - is accessible on route '/category/yvela-produqti/'
-  * Detail - is accessible on route '/product/slug/'. Change the slug with product name. there are several products. Default is 'raspberry'.
-  * Contact - is accessible on route '/contact/'
-  * Cart - is accessible on route '/cart/'
-  * Checkout - is accessible on route '/checkout/'
-  * Admin Panel - is accessible on '/admin/'. Username is 'admin' and password is 'admin'.
+  * Home - is accessible on route `/`
+  * Shop - is accessible on route `/category/kategoriebi/`
+  * Detail - is accessible on route `/product/slug/`. Change the slug with product name. there are several products. Default is 'raspberry'.
+  * Contact - is accessible on route `/contact/`
+  * Cart - is accessible on route `/cart/`
+  * Checkout - is accessible on route `/checkout/`
+  * Admin Panel - is accessible on `/admin/`. Username is 'admin' and password is 'admin'.
 
 
 ## Dependencies
